@@ -2,9 +2,13 @@ import {configureStore} from '@reduxjs/toolkit'
 import {combineReducers} from "redux";
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 import {alertsSlice} from "@chumsinc/alert-list";
+import statsSlice from "@/ducks/stats";
+import logSlice from "@/ducks/log";
 
 const rootReducer = combineReducers({
-    [alertsSlice.name]: alertsSlice.reducer,
+    [alertsSlice.reducerPath]: alertsSlice.reducer,
+    [logSlice.reducerPath]: logSlice.reducer,
+    [statsSlice.reducerPath]: statsSlice.reducer,
 });
 
 const store = configureStore({

@@ -1,11 +1,39 @@
 {
-  "name": "app-name",
-  "version": "1.1.2",
+  "name": "shopify-dashboard",
+  "version": "1.0.0",
+  "description": "App for monitoring Shopify integration",
+  "keywords": [
+    "Shopify",
+    "GraphQL",
+    "monitor",
+    "dashboard"
+  ],
+  "homepage": "https://github.com/ChumsInc/shopify-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/ChumsInc/shopify-dashboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChumsInc/shopify-dashboard.git"
+  },
+  "license": "ISC",
+  "author": "Steve Montgomery",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "start": "webpack serve --config webpack.dev.mjs --progress",
+    "build": "webpack --config webpack.prod.mjs --progress",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
   "dependencies": {
     "@chumsinc/alert-list": "^2.0.0",
     "@chumsinc/sortable-tables": "^2.0.7",
     "@chumsinc/ui-utils": "^2.0.4",
     "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.1.0",
+    "@mui/x-charts": "^8.3.1",
     "@reduxjs/toolkit": "^2.0.1",
     "@vitejs/plugin-react": "^4.4.1",
     "chums-types": "github:ChumsInc/chums-types",
@@ -18,25 +46,10 @@
     "react-dom": "^19.0.0",
     "react-error-boundary": "^6.0.0",
     "react-redux": "^9.0.4",
+    "react-router": "^7.6.0",
     "redux": "^5.0.1",
+    "victory": "^37.3.6",
     "vite": "^6.3.5"
-  },
-  "scripts": {
-    "start": "webpack serve --config webpack.dev.mjs --progress",
-    "build": "webpack --config webpack.prod.mjs --progress",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
@@ -64,13 +77,25 @@
     "webpack-manifest-plugin": "^5.0.0",
     "webpack-merge": "^6.0.1"
   },
+  "overrides": {
+    "eslint": "^9.8.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "auto-changelog": {
     "template": "changelog-template.hbs",
     "unreleased": true,
     "commitLimit": false,
     "breakingPattern": "BREAKING CHANGE:"
-  },
-  "overrides": {
-    "eslint": "^9.8.0"
   }
 }

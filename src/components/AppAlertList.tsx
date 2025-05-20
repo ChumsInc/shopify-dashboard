@@ -8,7 +8,8 @@ export default function AppAlertList() {
     const dismissHandler = (alert:StyledErrorAlert) => {
         dispatch(dismissAlert(alert));
     }
+
     return (
-        <AlertList list={alertList} onDismiss={dispatch} />
+        <AlertList list={alertList} onDismiss={dismissHandler} />
     )
 }
