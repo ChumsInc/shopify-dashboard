@@ -1,5 +1,5 @@
-import {createEntityAdapter, createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {ActionStats} from "@/types/stats";
+import {createEntityAdapter, createSelector, createSlice, type PayloadAction} from "@reduxjs/toolkit";
+import type {ActionStats} from "@/types/stats";
 import {loadStats} from "@/ducks/stats/actions";
 
 const statsAdapter = createEntityAdapter<ActionStats, string>({

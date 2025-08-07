@@ -1,4 +1,4 @@
-import {InventoryChange, UserError, VariantPriceChange} from "chums-types/src/shopify";
+import type {InventoryChange, UserError, VariantPriceChange} from "chums-types/shopify";
 
 export interface GraphQLLog {
     id: number;

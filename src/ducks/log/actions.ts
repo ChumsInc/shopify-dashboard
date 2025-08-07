@@ -1,8 +1,8 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {GraphQLLog, LoadUpdatesLogProps} from "@/types/logs";
+import type {GraphQLLog, LoadUpdatesLogProps} from "@/types/logs";
 import {fetchLogs} from "@/ducks/log/api";
 import {selectLoadProps, selectStatus} from "@/ducks/log/index";
-import {RootState} from "@/app/configureStore";
+import type {RootState} from "@/app/configureStore";
 
 export const loadLogs = createAsyncThunk<GraphQLLog[], LoadUpdatesLogProps | undefined, { state: RootState }>(
     'log/loadLogs',
@@ -13,7 +13,7 @@ export const loadLogs = createAsyncThunk<GraphQLLog[], LoadUpdatesLogProps | und
         }
         return await fetchLogs(arg);
     }, {
-        condition: (arg, {getState}) => {
+        condition: (_, {getState}) => {
             const state = getState();
             return selectStatus(state) === 'idle';
         }

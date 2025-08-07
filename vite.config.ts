@@ -18,6 +18,23 @@ export default defineConfig({
         }
     },
     plugins: [react()],
+    base: "/apps/shopify-dashboard/",
+    build: {
+        manifest: true,
+        sourcemap: true,
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        return 'vendor'
+                    }
+                    if (id.includes('src/components')) {
+                        return 'components';
+                    }
+                }
+            }
+        }
+    },
     server: {
         port: 8080,
         host: 'localhost',

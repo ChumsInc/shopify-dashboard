@@ -1,13 +1,13 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {LoadUpdateLogStatsProps, LoadUpdateLogStatsResponse} from "@/types/stats";
-import {RootState} from "@/app/configureStore";
+import type {LoadUpdateLogStatsProps, LoadUpdateLogStatsResponse} from "@/types/stats";
+import type {RootState} from "@/app/configureStore";
 import {fetchStats} from "@/ducks/stats/api";
 import {selectAction, selectLimit, selectOffset, selectPeriod, selectStatus} from "@/ducks/stats/index";
 
 
 export const loadStats = createAsyncThunk<LoadUpdateLogStatsResponse, void, { state: RootState }>(
     'stats/loadStats',
-    async (arg, {getState}) => {
+    async (_, {getState}) => {
         const state = getState();
         const props: LoadUpdateLogStatsProps = {
             period: selectPeriod(state),
@@ -18,7 +18,7 @@ export const loadStats = createAsyncThunk<LoadUpdateLogStatsResponse, void, { st
         return await fetchStats(props);
     },
     {
-        condition: (arg, {getState}) => {
+        condition: (_, {getState}) => {
             const state = getState();
             return selectStatus(state) === 'idle';
         }

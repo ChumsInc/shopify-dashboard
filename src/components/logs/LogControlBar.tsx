@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import {useCallback} from 'react';
 import {Button, Col, Row} from "react-bootstrap";
 import LogActionSelect from "@/components/logs/LogActionSelect";
 import {useAppDispatch, useAppSelector} from "@/app/configureStore";
@@ -14,7 +14,7 @@ export default function LogControlBar() {
 
     const loadHandler = useCallback(() => {
         dispatch(loadLogs(loadProps));
-    }, [loadProps])
+    }, [loadProps, dispatch])
 
     return (
         <Row>

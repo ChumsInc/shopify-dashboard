@@ -1,4 +1,4 @@
-import {GraphQLLog, LoadUpdatesLogProps} from "@/types/logs";
+import type {GraphQLLog, LoadUpdatesLogProps} from "@/types/logs";
 import {fetchJSON} from "@chumsinc/ui-utils";
 
 export async function fetchLogs(arg: LoadUpdatesLogProps): Promise<GraphQLLog[]> {

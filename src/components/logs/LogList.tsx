@@ -1,6 +1,6 @@
 import React from 'react';
-import {DataTable, DataTableField, TablePagination} from "@chumsinc/sortable-tables";
-import {GraphQLLog} from "@/types/logs";
+import {DataTable, type DataTableField, TablePagination} from "@chumsinc/sortable-tables";
+import type {GraphQLLog} from "@/types/logs";
 import {selectAllLogs} from "@/ducks/log";
 import {useAppSelector} from "@/app/configureStore";
 import dayjs from "dayjs";

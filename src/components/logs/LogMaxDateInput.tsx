@@ -1,7 +1,7 @@
-import React, {ChangeEvent, useId} from 'react';
+import {type ChangeEvent, useId} from 'react';
 import {useAppDispatch, useAppSelector} from "@/app/configureStore";
 import {selectMaxDate, selectMinDate, setMaxDate} from "@/ducks/log";
-import {FormControl, FormControlProps, InputGroup} from "react-bootstrap";
+import {FormControl, type FormControlProps, InputGroup} from "react-bootstrap";
 import dayjs from "dayjs";
 
 export type LogMaxDateInputProps = Omit<FormControlProps, 'type' | 'value' | 'onChange'>

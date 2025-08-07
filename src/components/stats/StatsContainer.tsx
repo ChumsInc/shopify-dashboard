@@ -1,13 +1,12 @@
-import React from 'react';
 import {Col, ProgressBar, Row} from "react-bootstrap";
 import StatsGraph from "@/components/stats/StatsGraph";
 import StatsControlBar from "@/components/stats/StatsControlBar";
 import StatsList from "@/components/stats/StatsList";
 import {useAppDispatch, useAppSelector} from "@/app/configureStore";
-import {LoadUpdatesLogProps} from "@/types/logs";
+import type {LoadUpdatesLogProps} from "@/types/logs";
 import dayjs from "dayjs";
 import {loadLogs} from "@/ducks/log/actions";
-import {ActionStats} from "@/types/stats";
+import type {ActionStats} from "@/types/stats";
 import {useNavigate} from "react-router";
 import {selectStatus} from "@/ducks/stats";
 import {selectLoadProps} from "@/ducks/log";

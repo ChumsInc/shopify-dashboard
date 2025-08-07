@@ -1,4 +1,4 @@
-import {ActionStats, LoadUpdateLogStatsProps, LoadUpdateLogStatsResponse} from "@/types/stats";
+import type {ActionStats, LoadUpdateLogStatsProps, LoadUpdateLogStatsResponse} from "@/types/stats";
 import {fetchJSON} from "@chumsinc/ui-utils";
 
 export async function fetchStats(arg:LoadUpdateLogStatsProps):Promise<LoadUpdateLogStatsResponse> {

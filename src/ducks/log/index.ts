@@ -1,5 +1,5 @@
-import {GraphQLLog, LoadUpdatesLogProps} from "@/types/logs";
-import {createEntityAdapter, createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
+import type {GraphQLLog, LoadUpdatesLogProps} from "@/types/logs";
+import {createEntityAdapter, createSelector, createSlice, type PayloadAction} from "@reduxjs/toolkit";
 import {loadLogs} from "@/ducks/log/actions";
 import dayjs from "dayjs";
 

@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Col, ProgressBar, Row} from "react-bootstrap";
 import LogList from "@/components/logs/LogList";
 import {ErrorBoundary} from "react-error-boundary";
-import ErrorBoundaryFallbackAlert from "@/components/ErrorBoundaryFallbackAlert";
-import {GraphQLLog} from "@/types/logs";
+import ErrorBoundaryFallbackAlert from "@/components/error-boundary/ErrorBoundaryFallbackAlert.tsx";
+import type {GraphQLLog} from "@/types/logs";
 import styled from "@emotion/styled";
 import LogControlBar from "@/components/logs/LogControlBar";
 import {useAppSelector} from "@/app/configureStore";

@@ -1,9 +1,8 @@
-import React from 'react';
 import {Outlet} from "react-router";
 import AppAlertList from "@/components/AppAlertList";
 import AppNav from "@/app/AppNav";
 import {ErrorBoundary} from "react-error-boundary";
-import {fallbackRender} from "@/components/ErrorBoundaryFallbackAlert";
+import fallbackRender from "@/components/error-boundary/fallbackRender";
 
 export default function AppLayout() {
     return (

@@ -1,11 +1,10 @@
-import React from 'react';
 import {Button, Col, Row} from "react-bootstrap";
 import {useAppDispatch} from "@/app/configureStore";
 import {loadStats} from "@/ducks/stats/actions";
 import PeriodSelect from "@/components/stats/PeriodSelect";
 import ActionSelect from "@/components/stats/ActionSelect";
 import {ErrorBoundary} from "react-error-boundary";
-import {fallbackRender} from "@/components/ErrorBoundaryFallbackAlert";
+import fallbackRender from "@/components/error-boundary/fallbackRender";
 
 export default function StatsControlBar() {
     const dispatch = useAppDispatch();

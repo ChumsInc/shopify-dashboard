@@ -1,6 +1,5 @@
-import React from 'react';
-import {DataTable, DataTableField} from "@chumsinc/sortable-tables";
-import {ActionStats} from "@/types/stats";
+import {DataTable, type DataTableField} from "@chumsinc/sortable-tables";
+import type {ActionStats} from "@/types/stats";
 import {useAppSelector} from "@/app/configureStore";
 import {selectStats} from "@/ducks/stats";
 import classNames from "classnames";
